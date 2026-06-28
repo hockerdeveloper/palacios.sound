@@ -8,7 +8,6 @@ import {
   Clock3,
   MapPin,
   MessageCircle,
-  Music4,
   Phone,
   Route,
   ShieldCheck,
@@ -168,16 +167,18 @@ export default function PalaciosSoundLanding() {
   };
 
   return (
-    <div className="min-h-screen bg-[#07090d] text-white selection:bg-cyan-400/30 selection:text-white">
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-[#07090d]/85 backdrop-blur-xl">
+    <div className="min-h-screen bg-brand-dark text-white selection:bg-brand-red/30 selection:text-white font-sans">
+      
+      {/* HEADER ESTRATÉGICO CON LOGO */}
+      <header className="sticky top-0 z-40 border-b border-white/10 bg-brand-dark/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/5 ring-1 ring-white/10">
-              <Music4 className="h-5 w-5 text-cyan-300" />
+            <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full ring-2 ring-brand-red/50 bg-black">
+              <img src="/logo.jpg" alt="Palacios Sound Logo" className="h-full w-full object-cover" />
             </div>
             <div>
-              <p className="text-sm font-semibold tracking-[0.28em] text-white/60">PALACIOS SOUND</p>
-              <p className="text-xs text-white/45">Activaciones comerciales premium</p>
+              <p className="text-sm font-bold tracking-[0.28em] text-white/90 uppercase">Palacios Sound</p>
+              <p className="text-xs text-brand-cyan">Activaciones comerciales premium</p>
             </div>
           </div>
 
@@ -185,7 +186,7 @@ export default function PalaciosSoundLanding() {
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:bg-cyan-300/20"
+            className="inline-flex items-center gap-2 rounded-full border border-brand-red/30 bg-brand-red/10 px-4 py-2 text-sm font-medium text-brand-red transition hover:bg-brand-red hover:text-white"
           >
             <MessageCircle className="h-4 w-4" />
             Cotizar por WhatsApp
@@ -194,8 +195,9 @@ export default function PalaciosSoundLanding() {
       </header>
 
       <main>
+        {/* HERO CON GRADIENTES DE MARCA (ROJO Y CIAN) */}
         <section className="relative overflow-hidden border-b border-white/10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.16),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(236,72,153,0.10),_transparent_24%),linear-gradient(180deg,_rgba(255,255,255,0.02),_transparent)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(249,0,48,0.15),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(0,212,255,0.12),_transparent_24%),linear-gradient(180deg,_rgba(255,255,255,0.02),_transparent)]" />
           <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-24">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
@@ -203,8 +205,8 @@ export default function PalaciosSoundLanding() {
               transition={{ duration: 0.6 }}
               className="relative z-10"
             >
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
-                <Sparkles className="h-4 w-4 text-cyan-300" />
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-red/20 bg-brand-red/5 px-4 py-2 text-sm text-white/80">
+                <Sparkles className="h-4 w-4 text-brand-red" />
                 Cobertura en Tijuana, Rosarito y Tecate
               </div>
               <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
@@ -217,7 +219,7 @@ export default function PalaciosSoundLanding() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#paquetes"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-[#07090d] transition hover:bg-white/90"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-brand-dark transition hover:bg-white/90"
                 >
                   Ver paquetes <ChevronRight className="h-4 w-4" />
                 </a>
@@ -227,7 +229,7 @@ export default function PalaciosSoundLanding() {
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
-                  Cotizar mi activación <MessageCircle className="h-4 w-4" />
+                  Cotizar mi activación <MessageCircle className="h-4 w-4 text-brand-cyan" />
                 </a>
               </div>
 
@@ -239,9 +241,9 @@ export default function PalaciosSoundLanding() {
                 ].map(({ icon: Icon, title, desc }) => (
                   <div
                     key={title}
-                    className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.03)]"
+                    className="rounded-3xl border border-white/10 bg-brand-surface p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.03)]"
                   >
-                    <Icon className="h-5 w-5 text-cyan-300" />
+                    <Icon className="h-5 w-5 text-brand-cyan" />
                     <h3 className="mt-3 font-semibold">{title}</h3>
                     <p className="mt-1 text-sm leading-6 text-white/60">{desc}</p>
                   </div>
@@ -253,41 +255,41 @@ export default function PalaciosSoundLanding() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="relative z-10 rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/30 backdrop-blur"
+              className="relative z-10 rounded-[2rem] border border-white/10 bg-brand-surface p-6 shadow-2xl shadow-black/50 backdrop-blur"
             >
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-sm uppercase tracking-[0.25em] text-white/45">Cálculo rápido</p>
                   <h2 className="mt-2 text-2xl font-semibold">Cotizador automático</h2>
                 </div>
-                <div className="rounded-2xl border border-cyan-300/20 bg-cyan-300/10 px-3 py-2 text-right">
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-cyan-100/70">Total estimado</p>
-                  <p className="text-xl font-semibold text-cyan-100">{currency.format(total)}</p>
+                <div className="rounded-2xl border border-brand-red/20 bg-brand-red/10 px-3 py-2 text-right">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-brand-red">Total estimado</p>
+                  <p className="text-xl font-semibold text-white">{currency.format(total)}</p>
                 </div>
               </div>
 
               <div className="mt-6 space-y-4 text-sm">
-                <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-black/20 px-4 py-3">
+                <div className="flex items-center justify-between rounded-2xl border border-white/5 bg-black/40 px-4 py-3">
                   <span className="text-white/60">Paquete</span>
-                  <span className="font-semibold">{pkg.name}</span>
+                  <span className="font-semibold text-brand-cyan">{pkg.name}</span>
                 </div>
-                <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-black/20 px-4 py-3">
+                <div className="flex items-center justify-between rounded-2xl border border-white/5 bg-black/40 px-4 py-3">
                   <span className="text-white/60">Zona</span>
                   <span className="font-semibold">{zone.label}</span>
                 </div>
-                <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-black/20 px-4 py-3">
+                <div className="flex items-center justify-between rounded-2xl border border-white/5 bg-black/40 px-4 py-3">
                   <span className="text-white/60">Base</span>
                   <span className="font-semibold">{currency.format(pkg.price)}</span>
                 </div>
-                <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-black/20 px-4 py-3">
+                <div className="flex items-center justify-between rounded-2xl border border-white/5 bg-black/40 px-4 py-3">
                   <span className="text-white/60">Traslado / extras</span>
                   <span className="font-semibold">{currency.format(zone.surcharge + baseExtrasValue)}</span>
                 </div>
               </div>
 
-              <div className="mt-6 rounded-3xl border border-white/10 bg-[#0b1018] p-5">
+              <div className="mt-6 rounded-3xl border border-white/5 bg-black/60 p-5">
                 <p className="flex items-center gap-2 text-sm font-medium text-white/70">
-                  <Clock3 className="h-4 w-4 text-cyan-300" /> Reglas clave
+                  <Clock3 className="h-4 w-4 text-brand-cyan" /> Reglas clave
                 </p>
                 <ul className="mt-4 space-y-2 text-sm leading-6 text-white/60">
                   <li>• Zona base: Tijuana.</li>
@@ -300,9 +302,10 @@ export default function PalaciosSoundLanding() {
           </div>
         </section>
 
+        {/* PAQUETES */}
         <section id="paquetes" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-white/45">Paquetes</p>
+            <p className="text-sm uppercase tracking-[0.25em] text-brand-cyan">Paquetes</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Elige el paquete ideal para tu negocio</h2>
             <p className="mt-4 text-white/65">
               Desde activaciones locales hasta campañas de alto impacto, cada nivel está diseñado para una necesidad distinta.
@@ -318,18 +321,18 @@ export default function PalaciosSoundLanding() {
                   onClick={() => setSelectedPackage(p.id)}
                   className={`group rounded-[2rem] border p-6 text-left transition ${
                     active
-                      ? 'border-cyan-300/40 bg-cyan-300/10 shadow-[0_0_0_1px_rgba(34,211,238,0.15)]'
-                      : 'border-white/10 bg-white/5 hover:bg-white/[0.07]'
+                      ? 'border-brand-red/50 bg-brand-red/10 shadow-[0_0_20px_rgba(249,0,48,0.15)] scale-[1.02]'
+                      : 'border-white/10 bg-brand-surface hover:bg-white/[0.07] hover:border-white/20'
                   }`}
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.22em] text-white/45">Paquete</p>
+                      <p className={`text-xs uppercase tracking-[0.22em] ${active ? 'text-brand-red' : 'text-white/45'}`}>Paquete</p>
                       <h3 className="mt-2 text-2xl font-semibold">{p.name}</h3>
                     </div>
-                    <div className="rounded-2xl border border-white/10 bg-black/20 px-3 py-2 text-right">
+                    <div className="rounded-2xl border border-white/5 bg-black/40 px-3 py-2 text-right">
                       <p className="text-[11px] uppercase tracking-[0.2em] text-white/45">Final</p>
-                      <p className="text-lg font-semibold">{currency.format(p.price)}</p>
+                      <p className={`text-lg font-bold ${active ? 'text-brand-cyan' : 'text-white'}`}>{currency.format(p.price)}</p>
                     </div>
                   </div>
 
@@ -347,7 +350,7 @@ export default function PalaciosSoundLanding() {
                       <ul className="mt-3 space-y-2">
                         {p.includes.map((item) => (
                           <li key={item} className="flex gap-2 text-sm leading-6 text-white/68">
-                            <Check className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" />
+                            <Check className={`mt-0.5 h-4 w-4 shrink-0 ${active ? 'text-brand-red' : 'text-brand-cyan'}`} />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -360,10 +363,11 @@ export default function PalaciosSoundLanding() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 bg-white/[0.03]">
+        {/* BENEFICIOS */}
+        <section className="border-y border-white/5 bg-brand-surface">
           <div className="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
             <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-white/45">Beneficios</p>
+              <p className="text-sm uppercase tracking-[0.25em] text-brand-cyan">Beneficios</p>
               <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">¿Qué obtienes con tu activación?</h2>
               <p className="mt-4 max-w-xl text-white/65">
                 No compras solo sonido. Compras visibilidad, presencia, interacción y contenido que ayuda a mover negocio.
@@ -377,7 +381,7 @@ export default function PalaciosSoundLanding() {
                 'Más interacción con clientes',
                 'Material para redes sociales',
               ].map((item) => (
-                <div key={item} className="rounded-3xl border border-white/10 bg-white/5 p-5 text-sm font-medium text-white/80">
+                <div key={item} className="rounded-3xl border border-white/10 bg-black/40 p-5 text-sm font-medium text-white/80 hover:border-brand-cyan/30 transition-colors">
                   {item}
                 </div>
               ))}
@@ -385,10 +389,11 @@ export default function PalaciosSoundLanding() {
           </div>
         </section>
 
+        {/* COTIZADOR / FORMULARIO */}
         <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-white/45">Cotizador</p>
+              <p className="text-sm uppercase tracking-[0.25em] text-brand-red">Cotizador</p>
               <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Calcula tu inversión en segundos</h2>
               <p className="mt-4 text-white/65">
                 Selecciona tu paquete, agrega extras y obtiene el total estimado al instante.
@@ -400,7 +405,7 @@ export default function PalaciosSoundLanding() {
                   <select
                     value={selectedPackage}
                     onChange={(e) => setSelectedPackage(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 text-white outline-none ring-0 focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-brand-surface px-4 py-3 text-white outline-none ring-0 focus:border-brand-cyan/50 focus:bg-black transition-colors"
                   >
                     {packages.map((p) => (
                       <option key={p.id} value={p.id}>
@@ -415,7 +420,7 @@ export default function PalaciosSoundLanding() {
                   <select
                     value={selectedZone}
                     onChange={(e) => setSelectedZone(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 text-white outline-none ring-0 focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-brand-surface px-4 py-3 text-white outline-none ring-0 focus:border-brand-cyan/50 focus:bg-black transition-colors"
                   >
                     {zones.map((z) => (
                       <option key={z.id} value={z.id}>
@@ -435,15 +440,15 @@ export default function PalaciosSoundLanding() {
                       onClick={() => toggleExtra(item.id)}
                       className={`rounded-2xl border p-4 text-left transition ${
                         active
-                          ? 'border-cyan-300/40 bg-cyan-300/10'
-                          : 'border-white/10 bg-white/5 hover:bg-white/[0.07]'
+                          ? 'border-brand-cyan/40 bg-brand-cyan/10'
+                          : 'border-white/10 bg-brand-surface hover:bg-white/[0.07]'
                       }`}
                     >
                       <div className="flex items-center justify-between gap-3">
                         <p className="font-medium">{item.label}</p>
                         <div
                           className={`h-5 w-5 rounded-full border ${
-                            active ? 'border-cyan-300 bg-cyan-300' : 'border-white/20'
+                            active ? 'border-brand-cyan bg-brand-cyan' : 'border-white/20'
                           }`}
                         />
                       </div>
@@ -454,14 +459,15 @@ export default function PalaciosSoundLanding() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6">
+            {/* FORMULARIO LATERAL */}
+            <div className="rounded-[2rem] border border-white/10 bg-brand-surface p-6 shadow-xl">
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="space-y-2 sm:col-span-2">
                   <span className="text-sm text-white/60">Nombre completo</span>
                   <input
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -470,7 +476,7 @@ export default function PalaciosSoundLanding() {
                   <input
                     value={businessName}
                     onChange={(e) => setBusinessName(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -479,7 +485,7 @@ export default function PalaciosSoundLanding() {
                   <input
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -488,7 +494,7 @@ export default function PalaciosSoundLanding() {
                   <input
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -497,7 +503,7 @@ export default function PalaciosSoundLanding() {
                   <input
                     value={eventType}
                     onChange={(e) => setEventType(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -507,7 +513,7 @@ export default function PalaciosSoundLanding() {
                     type="date"
                     value={eventDate}
                     onChange={(e) => setEventDate(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -517,7 +523,7 @@ export default function PalaciosSoundLanding() {
                     type="time"
                     value={eventStart}
                     onChange={(e) => setEventStart(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -526,7 +532,7 @@ export default function PalaciosSoundLanding() {
                   <input
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -535,7 +541,7 @@ export default function PalaciosSoundLanding() {
                   <input
                     value={zoneArea}
                     onChange={(e) => setZoneArea(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -544,7 +550,7 @@ export default function PalaciosSoundLanding() {
                   <input
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -553,7 +559,7 @@ export default function PalaciosSoundLanding() {
                   <input
                     value={guests}
                     onChange={(e) => setGuests(e.target.value)}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
 
@@ -562,7 +568,7 @@ export default function PalaciosSoundLanding() {
                   <input
                     value={selectedExtras.map((id) => extras.find((e) => e.id === id)?.label).filter(Boolean).join(', ')}
                     readOnly
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 text-white/70 outline-none"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 text-white/70 outline-none"
                   />
                 </label>
 
@@ -572,20 +578,20 @@ export default function PalaciosSoundLanding() {
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
                     rows={4}
-                    className="w-full rounded-2xl border border-white/10 bg-[#0b1018] px-4 py-3 outline-none focus:border-cyan-300/50"
+                    className="w-full rounded-2xl border border-white/10 bg-black/50 px-4 py-3 outline-none focus:border-brand-red/50 transition-colors"
                   />
                 </label>
               </div>
 
-              <div className="mt-6 rounded-3xl border border-cyan-300/20 bg-cyan-300/10 p-5">
+              <div className="mt-6 rounded-3xl border border-brand-red/20 bg-brand-red/10 p-5">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-sm text-cyan-100/70">Total estimado</p>
-                    <p className="text-3xl font-semibold text-cyan-100">{currency.format(total)}</p>
+                    <p className="text-sm text-brand-red/80 font-medium">Total estimado</p>
+                    <p className="text-3xl font-bold text-white">{currency.format(total)}</p>
                   </div>
-                  <div className="text-right text-sm text-cyan-100/70">
+                  <div className="text-right text-sm text-white/60">
                     <p>Incluye el ajuste final del 20%</p>
-                    <p>Cierre directo por WhatsApp Business</p>
+                    <p>Cierre directo por WhatsApp</p>
                   </div>
                 </div>
               </div>
@@ -594,7 +600,7 @@ export default function PalaciosSoundLanding() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 font-semibold text-[#07090d] transition hover:bg-white/90"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-red px-6 py-4 font-bold text-white transition hover:bg-brand-red/80 shadow-lg shadow-brand-red/20"
               >
                 Reservar por WhatsApp <Phone className="h-4 w-4" />
               </a>
@@ -602,65 +608,67 @@ export default function PalaciosSoundLanding() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 bg-white/[0.03]">
+        {/* COBERTURA Y REGLAS */}
+        <section className="border-y border-white/5 bg-brand-surface">
           <div className="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8">
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6">
-              <p className="text-sm uppercase tracking-[0.25em] text-white/45">Cobertura</p>
+            <div className="rounded-[2rem] border border-white/10 bg-black/40 p-6">
+              <p className="text-sm uppercase tracking-[0.25em] text-brand-cyan">Cobertura</p>
               <h2 className="mt-3 text-3xl font-semibold">Cobertura real en la zona</h2>
               <div className="mt-6 space-y-3 text-white/70">
                 <p className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-cyan-300" /> Tijuana — zona base.
+                  <MapPin className="h-4 w-4 text-brand-cyan" /> Tijuana — zona base.
                 </p>
                 <p className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-cyan-300" /> Rosarito — traslado automático.
+                  <MapPin className="h-4 w-4 text-brand-red" /> Rosarito — traslado automático.
                 </p>
                 <p className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-cyan-300" /> Tecate — traslado automático.
+                  <MapPin className="h-4 w-4 text-brand-red" /> Tecate — traslado automático.
                 </p>
                 <p className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-cyan-300" /> Otras ciudades — cotización especial.
+                  <MapPin className="h-4 w-4 text-white/40" /> Otras ciudades — cotización especial.
                 </p>
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6">
-              <p className="text-sm uppercase tracking-[0.25em] text-white/45">Reglas</p>
+            <div className="rounded-[2rem] border border-white/10 bg-black/40 p-6">
+              <p className="text-sm uppercase tracking-[0.25em] text-brand-cyan">Reglas</p>
               <h2 className="mt-3 text-3xl font-semibold">Condiciones comerciales</h2>
               <ul className="mt-6 space-y-3 text-white/68">
                 <li className="flex gap-2">
-                  <BadgeInfo className="mt-0.5 h-4 w-4 text-cyan-300" /> Anticipo mínimo de 50%.
+                  <BadgeInfo className="mt-0.5 h-4 w-4 text-brand-cyan" /> Anticipo mínimo de 50%.
                 </li>
                 <li className="flex gap-2">
-                  <BadgeInfo className="mt-0.5 h-4 w-4 text-cyan-300" /> Saldo 24 horas antes del evento.
+                  <BadgeInfo className="mt-0.5 h-4 w-4 text-brand-cyan" /> Saldo 24 horas antes del evento.
                 </li>
                 <li className="flex gap-2">
-                  <BadgeInfo className="mt-0.5 h-4 w-4 text-cyan-300" /> Horas extra con cargo adicional.
+                  <BadgeInfo className="mt-0.5 h-4 w-4 text-brand-cyan" /> Horas extra con cargo adicional.
                 </li>
                 <li className="flex gap-2">
-                  <BadgeInfo className="mt-0.5 h-4 w-4 text-cyan-300" /> Cancelación sin devolución dentro de 72 horas.
+                  <BadgeInfo className="mt-0.5 h-4 w-4 text-brand-red" /> Cancelación sin devolución dentro de 72 horas.
                 </li>
                 <li className="flex gap-2">
-                  <BadgeInfo className="mt-0.5 h-4 w-4 text-cyan-300" /> No incluye permisos, energía, planta, hospedaje ni servicios no pactados.
+                  <BadgeInfo className="mt-0.5 h-4 w-4 text-white/40" /> No incluye permisos, energía, planta, hospedaje ni servicios no pactados.
                 </li>
               </ul>
             </div>
           </div>
         </section>
 
+        {/* CTA FINAL */}
         <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <div className="rounded-[2.25rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-8 text-center sm:p-12">
-            <p className="text-sm uppercase tracking-[0.25em] text-white/45">Cierre</p>
+          <div className="rounded-[2.25rem] border border-brand-red/20 bg-[linear-gradient(135deg,rgba(249,0,48,0.1),rgba(0,212,255,0.05))] p-8 text-center sm:p-12 shadow-2xl">
+            <p className="text-sm uppercase tracking-[0.25em] text-brand-red font-semibold">Cierre</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
               Tu evento empieza con una primera impresión sólida.
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-white/65">
+            <p className="mx-auto mt-4 max-w-2xl text-white/70">
               Asegura tu fecha y cierra por WhatsApp Business. Sin vueltas, sin saturación y con una experiencia que se ve profesional desde el primer segundo.
             </p>
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 font-semibold text-[#07090d] transition hover:bg-white/90"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-8 py-4 font-bold text-brand-dark transition hover:bg-gray-200 hover:scale-105"
             >
               Reservar por WhatsApp <ChevronRight className="h-4 w-4" />
             </a>
@@ -669,4 +677,4 @@ export default function PalaciosSoundLanding() {
       </main>
     </div>
   );
-    }
+}
