@@ -1,28 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html{
-  scroll-behavior:smooth;
+@layer base {
+  body {
+    @apply bg-brand-dark text-white antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
 }
 
-body{
-  margin:0;
-  font-family:'Inter',sans-serif;
-  background:#07090d;
-  color:#fff;
+/* Scrollbar estilizado para mantener el branding */
+::-webkit-scrollbar {
+  width: 8px;
 }
-
-*{
-  box-sizing:border-box;
+::-webkit-scrollbar-track {
+  background: #050505;
 }
-
-a{
-  text-decoration:none;
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
 }
-
-button,input,textarea,select{
-  font:inherit;
+::-webkit-scrollbar-thumb:hover {
+  background: #F90030;
 }
