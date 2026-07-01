@@ -8,14 +8,17 @@ export default {
     extend: {
       colors: {
         brand: {
-          red: '#F90030',   // Rojo neón del logo
-          cyan: '#00D4FF',  // Cian eléctrico del ecualizador
-          dark: '#050505',  // Fondo ultra oscuro
-          surface: '#111111'// Superficie para tarjetas
+          red: '#F90030',
+          cyan: '#00D4FF',
+          dark: '#07090D',
+          surface: '#111111',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      animation: {
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       }
     },
   },

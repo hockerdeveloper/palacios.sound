@@ -3,23 +3,37 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-brand-dark text-white antialiased;
+    @apply bg-[#07090D] text-white antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  * {
+    box-sizing: border-box;
   }
 }
 
-/* Scrollbar estilizado para mantener el branding */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #050505;
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #2a2a2a;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #F90030;
+}
+
+@layer utilities {
+  .bg-white\/3 {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+  .border-white\/8 {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
 }
