@@ -12,7 +12,6 @@ import {
   Sparkles,
   TrendingUp,
   Users,
-  Volume2,
   Zap,
   Mic,
 } from 'lucide-react';
